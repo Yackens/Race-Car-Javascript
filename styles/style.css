@@ -51,7 +51,25 @@ body {
 }
 
 .arrows-img {
-  width: 150px;
+  width: 200px;
+}
+
+p {
+  font-size: 24px;
+  font-family: "Verdana", Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+h1 {
+  font-size: 40px;
+  font-family: "Verdana", Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: 30px;
+  font-family: "Verdana", Helvetica, sans-serif;
+  font-weight: bolder;
 }
 
 body button {
@@ -64,3 +82,4 @@ body button {
   border-radius: 5px;
   margin-bottom: 20px;
 }
+

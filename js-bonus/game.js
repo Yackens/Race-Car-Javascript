@@ -7,8 +7,8 @@ class Game {
       this.gameScreen,
       200,
       500,
-      80,
-      120,
+      100,
+      150,
       "./images/car.png"
     );
     this.height = 600;
@@ -59,17 +59,14 @@ class Game {
         obstacle.element.remove();
         // Remove obstacle object from the array
         this.obstacles.splice(i, 1);
-        // Reduce player's lives by 1 and add it to the screen
+        // Reduce player's lives by 1
         this.lives--;
-        document.getElementById("lives").innerHTML = this.lives;
-
         // Update the counter variable to account for the removed obstacle
         i--;
       } // If the obstacle is off the screen (at the bottom)
       else if (obstacle.top > this.height) {
-        // Increase the score by 10 and add it to the screen
-        this.score += 10;
-        document.getElementById("score").innerHTML = this.score;
+        // Increase the score by 1
+        this.score++;
         // Remove the obstacle from the DOM
         obstacle.element.remove();
         // Remove obstacle object from the array
@@ -99,12 +96,6 @@ class Game {
     });
 
     this.gameIsOver = true;
-    if (this.score >= 50) {
-      document.getElementsByClassName("final_score")[0].textContent = `Congratulations! Your final score was ${this.score} points.`;
-    }
-    else {
-      document.getElementsByClassName("final_score")[0].textContent = `Your final score was ${this.score} points.`;
-    }
     // Hide game screen
     this.gameScreen.style.display = "none";
     // Show end game screen

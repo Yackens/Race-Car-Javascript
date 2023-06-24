@@ -3,11 +3,11 @@ window.onload = function () {
   const restartButton = document.getElementById("restart-button");
   let game;
 
-  startButton.addEventListener("click", () => {
+  startButton.addEventListener("click", function () {
     startGame();
   });
 
-  restartButton.addEventListener("click", () => {
+  restartButton.addEventListener("click", function () {
     // Call the restartGame function when the button is clicked
     restartGame();
   });
@@ -29,17 +29,9 @@ window.onload = function () {
     const key = event.key;
     const possibleKeystrokes = [
       "ArrowLeft",
-      "a",
-      "A",
       "ArrowUp",
-      "w",
-      "W",
       "ArrowRight",
-      "d",
-      "D",
       "ArrowDown",
-      "s",
-      "S"
     ];
 
     // Check if the pressed key is in the possibleKeystrokes array
@@ -49,24 +41,20 @@ window.onload = function () {
       // Update player's directionX and directionY based on the key pressed
       switch (key) {
         case "ArrowLeft":
-        case "a":
-        case "A":
-          game.player.directionX = -3;
+          console.log("pressed LEFT");
+          game.player.directionX = -1;
           break;
         case "ArrowUp":
-        case "w":
-        case "W":
-          game.player.directionY = -3;
+          console.log("pressed UP");
+          game.player.directionY = -1;
           break;
         case "ArrowRight":
-        case "d":
-        case "D":
-          game.player.directionX = 3;
+          console.log("pressed RIGHT");
+          game.player.directionX = 1;
           break;
         case "ArrowDown":
-        case "s":
-        case "S":
-          game.player.directionY = 3;
+          console.log("pressed DOWN");
+          game.player.directionY = 1;
           break;
       }
     }
